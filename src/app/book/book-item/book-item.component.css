@@ -1,0 +1,13 @@
+:host {display: inline-flex; width: 100%; }
+.book-item{ display: flex; gap: 8px; flex-direction: row; width: 100%;}
+.book-item > img { height: 248px;  object-fit: contain; }
+
+.book-item__content{ display: flex;flex-direction: column;justify-content: space-between; width: 100%;}
+.book-item__title {font-size: 24px; font-weight: 700; color: rgba(26, 21, 135, 1)}
+.book-item__subtitle { font-weight: 500; font-size: 20px;}
+.book-item__description {overflow: hidden;height: 116px;}
+.book-item__link {cursor: pointer; color: #00A4C0; text-align: right;    display: flex;justify-content: flex-end; margin: 4px 0 0 0; text-decoration: none; font-weight: 700;}
+
+@media(max-width: 600px) {
+  .book-item {flex-direction: column}
+}

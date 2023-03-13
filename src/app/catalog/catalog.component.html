@@ -1,0 +1,9 @@
+<div class="about__container" *ngIf="books" >
+  <app-book-item
+      *ngFor="let book of books | async;"
+      [bookInfo]="book"
+  >
+    </app-book-item>
+</div>
+
+

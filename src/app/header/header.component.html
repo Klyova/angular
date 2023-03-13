@@ -1,0 +1,19 @@
+<mat-toolbar class="header">
+  <div class="header__burger">
+    <button mat-icon-button (click)="onToggleSidenav()" class="header__burger-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <a routerLink="/home" class="header__logo">
+    <img src="../assets/images/logo.png" alt="logo">
+  </a>
+
+  <ul class="header__navigation-items">
+    <li>
+      <a routerLink="/catalog">Каталог книг</a>
+    </li>
+    <li>
+      <a routerLink="/contact">Контакти</a>
+    </li>
+  </ul>
+</mat-toolbar>

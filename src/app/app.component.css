@@ -1,0 +1,9 @@
+.example-container {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  color: rgba(26, 21, 135, 1);
+}
+

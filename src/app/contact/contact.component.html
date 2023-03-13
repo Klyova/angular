@@ -1,0 +1,35 @@
+<div class="contact__container">
+  <div class="contact__title">Ви відчуваєте потребу у змінах?<br/>У Вас є власне бачення та Ви готові їм поділитися,
+    задля покращення якості життя?
+  </div>
+  <form class="contact__form" [formGroup]="userForm" #postForm="ngForm" novalidate (ngSubmit)="onCreatePost(postForm.value)">
+    <div class="contact__form-wrap">
+      <div class="contact__form-group">
+        <input class="contact__form-control" name="name" formControlName="userName" placeholder="Прізвище, Ім’я" />
+        <div class="contact__form-danger"
+             *ngIf="userForm.controls['userName'].invalid && userForm.controls['userName'].touched">
+          Не вказано ім’я
+        </div>
+      </div>
+      <div class="contact__form-group">
+        <input class="contact__form-control" name="email" formControlName="userEmail" placeholder="Email"/>
+        <div class="contact__form-danger"
+             *ngIf="userForm.controls['userEmail'].invalid && userForm.controls['userEmail'].touched">
+          Некоректний email
+        </div>
+      </div>
+      <div class="contact__form-group">
+        <textarea class="contact__form-control" name="text" formControlName="userText"  cols="30" rows="10" placeholder="Коротко про себе та причину бажання доєднатися"></textarea>
+        <div class="contact__form-danger"
+             *ngIf="userForm.controls['userText'].invalid && userForm.controls['userText'].touched">
+          Не вказана причина приєднання
+        </div>
+      </div>
+      <div class="contact__form-group">
+      <button class="contact__btn-default" [disabled]="userForm.invalid" (click)="onClearPosts()" >
+          Відправити
+        </button>
+    </div>
+    </div>
+  </form>
+</div>

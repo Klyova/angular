@@ -1,0 +1,14 @@
+<div class="book-detail__container" *ngIf="bookDetail">
+  <img  *ngIf="thumbnail" [src]="thumbnail" />
+  <div class="book-detail__content">
+    <div class="book-detail__title">{{ bookDetail.volumeInfo.title }}</div>
+    <div class="book-detail__subtitle" *ngIf="bookDetail.volumeInfo.subtitle">
+      {{ bookDetail.volumeInfo.subtitle }}. Author: {{ bookDetail.volumeInfo.authors }}
+    </div>
+    <div class="book-detail__description">
+      <p *ngIf="bookDetail.volumeInfo.description">
+        {{ bookDetail.volumeInfo.description }}
+      </p>
+    </div>
+  </div>
+</div>

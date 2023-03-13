@@ -1,0 +1,14 @@
+<div class="book-item" *ngIf="bookInfo.volumeInfo.imageLinks ">
+  <img  *ngIf="thumbnail" [src]="thumbnail" />
+  <div class="book-item__content">
+    <div class="book-item__content-wrap">
+      <div class="book-item__title">{{ bookInfo.volumeInfo.title }}</div>
+      <div class="book-item__description">
+        <p >
+          {{ bookInfo.volumeInfo.description }}
+        </p>
+      </div>
+    </div>
+    <a class="book-item__link" (click)="openBookDetailPage()">...читати детальніше</a>
+  </div>
+</div>

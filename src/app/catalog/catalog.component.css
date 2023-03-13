@@ -1,0 +1,12 @@
+.about__container {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 992px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media(max-width: 1200px) {
+  .about__container{max-width: 94%;}
+}

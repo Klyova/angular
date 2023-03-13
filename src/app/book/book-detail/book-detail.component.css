@@ -1,0 +1,16 @@
+.book-detail__container {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 992px;    display: flex;
+  gap: 16px;
+}
+.book-detail__container> img { height: 248px;  object-fit: contain; }
+.book-detail__title {font-size: 24px; font-weight: 700; color: rgba(26, 21, 135, 1)}
+.book-detail__subtitle { font-weight: 500; font-size: 20px;}
+
+@media(max-width: 1200px) {
+  .book-detail__container {max-width: 94%;}
+}
+@media(max-width: 600px) {
+  .book-detail__container {flex-direction: column}
+}

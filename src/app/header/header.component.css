@@ -1,0 +1,20 @@
+:host {background: #1A1687;width: 100%;position: fixed;z-index: 10;border-radius: 0 0 40px 0;overflow: hidden;padding: 8px 0;transition: 0.4s;top: 0;}
+.header {background: transparent;display: flex;flex-direction: row;align-items: center;justify-content: space-between;margin: 0 auto;max-width: 1194px;}
+.header__logo > img {height: 64px}
+.header__burger {display: none;}
+
+a{text-decoration: none;color: #FFFFFF;}
+a:hover, a:active{color: #D3D3D3FF;}
+
+.header__navigation-items{list-style-type: none;padding: 0;margin: 0;display: flex;gap: 16px;}
+
+mat-toolbar{border-radius: 3px;}
+
+@media(max-width: 1200px) {
+  .header { max-width: 98%;flex-direction: row-reverse;}
+  .header__navigation-items {display: none}
+  mat-toolbar{border-radius: unset;}
+  .header__burger {display: block;}
+  .header__burger-button {background: transparent;color: white;border: none;}
+}
+

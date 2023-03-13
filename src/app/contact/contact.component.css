@@ -1,0 +1,77 @@
+.contact__container {
+  margin: 100px auto;
+  width: 100%;
+  max-width: 992px;
+}
+
+.contact__title {text-align: center;font-weight: 700;font-size: 24px; margin: 0 0 16px 0;}
+
+.contact__form {
+  background: #F8F7FC;
+  box-shadow: 9px 9px 20px rgb(0 0 0 / 10%);
+  border-radius: 40px 0;
+  text-align: center;
+  padding: 30px 0 50px 0;
+  margin: 0 0 45px 0;}
+
+.contact__form-wrap {
+  max-width: 790px;
+  margin: auto;
+}
+
+.contact__form-control {
+  font-size: 18px;
+  background: #F8F7FC;
+  box-shadow: 9px 9px 20px rgb(0 0 0 / 10%);
+  border-radius: 40px 0;
+  width: 100%;
+  padding: 16px 40px;
+  border: none;
+  margin: 0 0 14px 0;
+  box-sizing: border-box;
+}
+
+.contact__form-control:focus-visible {
+  outline: none;
+}
+
+.contact__form-danger {
+  text-align: left;
+  color: red;
+  padding: 0 0 8px 16px;
+}
+
+.contact__btn-default {
+  background: #1A1687;
+  border-radius: 40px 0;
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 12px 40px;
+  border: none;
+  cursor: pointer;
+  margin: 40px 0 0 0;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  background: #FFFFFF;
+  border-radius: 40px 0;
+  border: none;
+}
+
+input::placeholder,textarea::placeholder {color: #00A4C0}
+textarea:focus-visible {outline: unset}
+
+@media(max-width: 1200px) {
+  .contact__container {max-width: 90%;}
+  .contact__title {font-size: calc( 15px + 5 * ((100vw - 320px) / (1200 - 320)) )}
+  .contact__form-wrap {max-width: 92%;}
+  textarea {    margin: 0 0 30px 0;padding: 16px 20px; font-size:13px;}
+}
+
+@media(max-width: 480px) {
+  .contact__btn-default {padding: 10px 18px;font-size: 14px;}
+  .contact__form-control{font-size: 16px;padding: 16px 24px}
+}
